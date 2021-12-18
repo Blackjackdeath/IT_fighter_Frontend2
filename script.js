@@ -25,9 +25,8 @@ function render(data, region, search) {
 
 function getRegion() {
     document.getElementById('output').innerHTML = '';
-    if (event.target.tagName === "INPUT") {
-        render(data, document.forms.regions.elements.region.value, document.getElementById('search').value);
-    }
+    render(data, document.forms.regions.elements.region.value, document.getElementById('search').value);
+    
 }
 
 model();
