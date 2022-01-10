@@ -1,11 +1,19 @@
-async function model() {
+class ModelRequestOnServer {
+  #_response;
+  #_date;
+  #_url;
+  constructor(url) {
+    this.#_url = url;
+  };
+  async request() {
     try {
-        const response = await fetch('https://restcountries.com/v3.1/all/');
-        const data = await response.json();
-        return data;
+      this.#_response = await fetch(this.#_url);
+      this.#_date = await this.#_response.json();
+      return this.#_date
     } catch (error) {
-      return console.log(error);
-    }
+      console.log(error);
+    };
+  };
 };
 
-export { model }
+export { ModelRequestOnServer };
