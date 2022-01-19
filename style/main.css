@@ -28,3 +28,14 @@ div{
     border: none;
     height: auto;
 }
+#output{
+    width: 60%;
+}
+#countryInfo{
+    position: absolute;
+    top: 190px;
+    right: 5%;
+    width: 30%;
+    height: 300px;
+    border: 1px solid blue;
+}

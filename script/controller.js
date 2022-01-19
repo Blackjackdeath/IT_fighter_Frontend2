@@ -19,6 +19,20 @@ class Controller {
         };
         return this.#_resultSearch;
     };
+    getCountriInfo(name){
+        let i=0;
+        let arr=name.split(' ');
+        arr.shift();
+        name=arr.join(' ');
+        console.log(name);
+        while(i<this.#_data.length){
+            if (this.#_data[i].name.official===name){
+                console.log(this.#_data[i]);
+                return this.#_data[i];
+            };
+            i++;
+        };
+    };
 };
 
 export {Controller}
